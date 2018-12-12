@@ -67,8 +67,8 @@ class ScoreApi extends React.Component {
           {teams.map(el => 
             <li key={el.team.id} className="table-row">
               <ul>
-                <li key="pos">{el.position}</li>
-                <li key="team">
+                <li key="pos" className="pos">{el.position}</li>
+                <li key="team" className="team">
                   <img className="crest" src={el.team.crestUrl} alt=""/>
                   {el.team.name}
                 </li>
@@ -79,7 +79,7 @@ class ScoreApi extends React.Component {
                 <li key="gf">{el.goalsFor}</li>
                 <li key="ga">{el.goalsAgainst}</li>
                 <li key="gd">{el.goalDifference}</li>
-                <li key="pnt">{el.points}</li>
+                <li key="pnt" className="pts">{el.points}</li>
               </ul>
             </li>
           )}
