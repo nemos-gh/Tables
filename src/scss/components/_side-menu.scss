@@ -12,9 +12,10 @@
     padding: 0;
     width: 100%;
     list-style: none;
-    box-shadow: 0 0 40px rgba(0,0,0,.05);
+    box-shadow: 0 0 40px rgba(0,0,0,.04);
 
     li {
+      border-bottom: 1px solid rgba(0,0,0,.04);
 
       &:first-child {
         padding: 10px;
@@ -34,7 +35,6 @@
         font-size: px-to-rem(15);
         font-weight: 500;
         background: $white;
-        border-bottom: 1px solid rgba(0,0,0,.05);
         transition: all .2s cubic-bezier(.8,0,1,1);
         
         &:hover {

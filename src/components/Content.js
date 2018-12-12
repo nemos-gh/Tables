@@ -12,10 +12,10 @@ class Content extends React.Component {
       <main>
         <div className="container">
           <div className="row">
-            <div className="col col-md-3 col-lg-2">
+            <div className="col-12 col-md-3 col-lg-2">
               <SideMenu />
             </div>
-            <div className="col col-md-9 col-lg-8 offset-lg-1">
+            <div className="col-12 col-md-9 col-lg-8 offset-lg-1">
               <Switch>
                 <Route exact path="/" component={Home}/>
                 <Route path="/table/:league" component={League}/>
