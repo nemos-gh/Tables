@@ -1,0 +1,25 @@
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: $footerHeight;
+  color: rgba($white, .6);
+  font-size: px-to-rem(14);
+  background: $-c-footer;
+
+  span {
+    color: $white;
+  }
+
+  a {
+    color: $-c-pl-3;
+    
+    &:hover {
+      color: $-c-pl-3;
+      text-decoration: underline;
+    }
+  }
+}

@@ -1,0 +1,8 @@
+// Calculate pixels -> rems
+@function px-to-rem($pixels) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @return $pixels / $baseFontSize * 1rem;
+}
