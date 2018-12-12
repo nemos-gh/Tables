@@ -47,7 +47,7 @@ class ScoreApi extends React.Component {
     const teams = this.state.table;
 
     return (
-      <div>
+      <div className="league-table">
         <h2 className="league-name">{league}</h2>
         <ul className="table">
           <li key="th" className="table-heading">

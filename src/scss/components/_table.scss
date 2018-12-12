@@ -1,8 +1,13 @@
-.league-name {
-  margin: 0;
-  padding: 20px 38px;
-  color: $-c-pl-2;
+.league-table {
+  padding: 0 0 40px;
   background: $-c-pl-3;
+  box-shadow: 0 0 40px rgba(0,0,0,.07);
+}
+
+.league-name {
+  margin: 0 38px;
+  padding: 20px 0;
+  color: $-c-pl-2;
 }
 
 .table {
@@ -10,15 +15,6 @@
   padding: 0;
   list-style: none;
   background: $white;
-  box-shadow: 0 0 60px rgba(0,0,0,.07);
-
-  &::after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 40px;
-    background: $-c-pl-3;
-  }
 
   > li {
 
