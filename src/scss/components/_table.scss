@@ -1,34 +1,32 @@
 .league-table {
-  padding: 0 0 40px;
-  background: $-c-pl-3;
-  box-shadow: 0 0 40px rgba(0,0,0,.07);
-}
-
-.league-name {
-  margin: 0 38px;
-  padding: 20px 0;
-  color: $-c-pl-2;
-}
-
-.table {
   margin: 0;
   padding: 0;
   list-style: none;
   background: $white;
-
+  box-shadow: 0 0 40px rgba(0,0,0,.07);
+  
   > li {
-
+    
     &:nth-child(2n) {
       background: rgba(0,0,0,.05);
     }
   }
-
+  
   ul {
     display: grid;
     grid-template-columns: 40px 1fr repeat(8, 40px);
     margin: 0;
     padding: 0;
     list-style: none;
+  }
+  
+  .league-name {
+    padding: 20px 38px;
+    color: $-c-pl-2;
+    line-height: px-to-rem(44);
+    font-size: px-to-rem(36);
+    font-weight: 700;
+    background: $-c-pl-3;
   }
 
   .table-heading {
@@ -92,5 +90,14 @@
         }
       }
     }
+  }
+
+  .last-update {
+    padding: 15px 20px;
+    color: $-c-pl-2;
+    line-height: px-to-rem(20);
+    font-size: px-to-rem(13);
+    text-align: right;
+    background: $-c-pl-3;
   }
 }
