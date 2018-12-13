@@ -1,13 +1,12 @@
 import React from 'react';
 
 const Table = (props) => {
-  const league = props.league;
   const table = props.table;
   const th = ['Pos', 'Team', 'Pld', 'W', 'D', 'L', 'GF', 'GA', 'GD', 'Pts'];
 
   return (
     <div className="league-table">
-      <h2 className="league-name">{league}</h2>
+      <h2 className="league-name">{props.league}</h2>
       <ul className="table">
         <li key="th" className="table-heading">
           <ul>
@@ -33,6 +32,7 @@ const Table = (props) => {
             </ul>
           </li>
         )}
+        <li>{props.lastUpdate}</li>
       </ul>
     </div>
   )

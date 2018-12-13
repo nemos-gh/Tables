@@ -4,11 +4,11 @@ import Api from './lib/api';
 class League extends React.Component {
   
   render() {
-    const countrie = this.props.match.params.league;
+    const country = this.props.match.params.league;
 
     return (
       <div>
-        <Api countrieCode={countrie} />
+        <Api countryCode={country} />
       </div>
     )
   }

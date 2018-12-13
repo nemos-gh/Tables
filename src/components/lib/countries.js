@@ -1,34 +1,29 @@
-const countries = [
+const country = [
   {
     "name": "England", 
     "shortName": "en", 
-    "league": "Premier League", 
-    "code": "PL" 
+    "leagueCode": "PL" 
   },
   {
     "name": "France", 
     "shortName": "fr", 
-    "league": "League 1", 
-    "code": "FL1" 
+    "leagueCode": "FL1" 
   }, 
   {
     "name": "Germany", 
     "shortName": "de", 
-    "league": "Bundesliga 1", 
-    "code": "BL1" 
+    "leagueCode": "BL1" 
   },  
   {
     "name": "Italy", 
     "shortName": "it", 
-    "league": "Serie A", 
-    "code": "SA" 
+    "leagueCode": "SA" 
   }, 
   {
     "name": "Spain", 
     "shortName": "sp", 
-    "league": "Primera Division", 
-    "code": "PD" 
+    "leagueCode": "PD" 
   }
 ];
 
-export default countries;
+export default country;

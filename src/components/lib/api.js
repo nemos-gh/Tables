@@ -7,19 +7,17 @@ class Api extends React.Component {
     super(props);
 
     this.state = {
-      standings: [],
+      data: null,
     }
   }
 
-  getCountry() {
-    const countrie = Countries.find(obj => obj.shortName === this.props.countrieCode);
-   
-    return countrie;
+  getLeagueCode() {
+    const code = Countries.find(obj => obj.shortName === this.props.countryCode).leagueCode;
+
+    return code;
   }
 
-  fetchData() {
-    const code = this.getCountry().code;
-
+  fetchData(code) {
     const url = `http://api.football-data.org/v2/competitions/${code}/standings/`;
     const options = {
       headers: { 'X-Auth-Token': 'a626ac5d8a8f4a23a0532d4b81d0bf57' },
@@ -27,31 +25,34 @@ class Api extends React.Component {
 
     fetch(url, options)
       .then(res => res.json())
+      .catch((error) => console.warn("fetch error:", error))
       .then(data => {
-        this.setState({
-          standings: data.standings[0].table
-        })
+        this.setState({data})
       })
   }
 
   componentDidMount() {
-    this.fetchData();
+    this.fetchData(this.getLeagueCode());
   }
 
   componentDidUpdate(prevProps) {
-    if (this.props.countrieCode !== prevProps.countrieCode) {
-      this.fetchData();
+    if (this.props.countryCode !== prevProps.countryCode) {
+      this.fetchData(this.getLeagueCode());
     }
   }
 
   render() {
-    const league = this.getCountry().league;
-    const table = this.state.standings;
+    if (!this.state.data) {
+      return (
+        <div className="loading">Data Loading...</div>
+      )
+    }
 
     return (
-      <Table 
-        league={league} 
-        table={table} />
+      <Table
+        league={this.state.data.competition.name}
+        table={this.state.data.standings[0].table}
+        lastUpdate={this.state.data.competition.lastUpdated} />
     )
   }
 }
