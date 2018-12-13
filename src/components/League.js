@@ -1,14 +1,14 @@
 import React from 'react';
-import ScoreApi from '../api';
+import Api from './lib/api';
 
 class League extends React.Component {
   
   render() {
-    const leagueCode = this.props.match.params.league;
+    const countrie = this.props.match.params.league;
 
     return (
       <div>
-        <ScoreApi league={leagueCode} />
+        <Api countrieCode={countrie} />
       </div>
     )
   }
