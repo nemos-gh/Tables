@@ -1,0 +1,15 @@
+.msg {
+  margin: px-to-rem($baseFontSize * 2) 0;
+  padding: px-to-rem(20) px-to-rem(25);
+  font-size: px-to-rem(15);
+  background: rgba(0,0,0,.05);
+  border-radius: 6px;
+
+  &.warning {
+    color: darken($-c-warning, 38);
+    font-weight: 500;
+    letter-spacing: .01em;
+    background: $-c-warning;
+    border: 1px solid darken($-c-warning, 23);
+  }
+}
