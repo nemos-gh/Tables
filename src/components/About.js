@@ -11,7 +11,8 @@ const About = () => {
         <li>Scss</li>
         <li>Bootstrap 4</li>
       </ul>
-      <p className="msg warning">This App is not styled for the Inetnet Explorer and never will be.</p>
+      <p>Hope you will find Tables App useful in any way... Enjoy!</p>
+      <p className="msg warning">This App doesn't support Inetnet Explorer and it never will. There, I said it.</p>
     </div>
   )
 }
