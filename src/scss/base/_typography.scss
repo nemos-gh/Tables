@@ -6,3 +6,47 @@ h1 {
 h2 {
   font-weight: 700;
 }
+
+
+.h-1 {
+  position: relative;
+  margin: px-to-rem(18) 0 px-to-rem(39);
+  font-family: $font-primary;
+  line-height: px-to-rem(60);
+  font-size: px-to-rem(60);
+  font-weight: 700;
+  letter-spacing: .02rem;
+  
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -9px;
+    left: 0;
+    width: 80px;
+    height: 2px;
+    background: $-c-pl-1;
+  }
+}
+
+.h-2 {
+  @extend .h-1;
+  margin: px-to-rem($baseFontSize * 3) 0 px-to-rem($baseFontSize);
+  line-height: px-to-rem(40);
+  font-size: px-to-rem(40);
+  letter-spacing: .01rem;
+
+  &::after { display: none; }
+}
+
+.h-3 {
+  @extend .h-2;
+  margin: px-to-rem($baseFontSize * 3) 0 px-to-rem($baseFontSize);
+  line-height: px-to-rem(32);
+  font-size: px-to-rem(32);
+}
+
+.small {
+  margin-bottom: px-to-rem(8);
+  color: $gray;
+}
