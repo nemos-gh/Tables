@@ -26,7 +26,7 @@ class Home extends React.Component {
         </pre>
         <p className="small">Start development environment</p>
         <pre>
-          <code>yarn start</code> or <code>npm run start</code>
+          <code>yarn start</code> or <code>npm start</code>
         </pre>
         <p>Nice and easy <span role="img" aria-label="snow">😎</span></p>
         <h2 className="h-2">Data Access</h2>
