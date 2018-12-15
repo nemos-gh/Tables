@@ -31,7 +31,7 @@ class Home extends React.Component {
         <p>Nice and easy <span role="img" aria-label="snow">😎</span></p>
         <h2 className="h-2">Data Access</h2>
         <p>After successful registration on the Football-Data.org, copy the Api Key you received in the confirmation email and paste it as value for the ApiKey constant.</p>
-        <small>Path to ApiKey constant</small>
+        <p className="small">Path to ApiKey constant</p>
         <pre>
           <code>./src/components/lib/api-key.js</code>
         </pre>
