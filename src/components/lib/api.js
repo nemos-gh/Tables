@@ -1,6 +1,7 @@
 import React from 'react';
 import Countries from './countries';
 import Table from '../Table';
+import ApiKey from './api-key';
 
 class Api extends React.Component {
   constructor(props) {
@@ -20,7 +21,7 @@ class Api extends React.Component {
   fetchData(code) {
     const url = `http://api.football-data.org/v2/competitions/${code}/standings/`;
     const options = {
-      headers: { 'X-Auth-Token': 'a626ac5d8a8f4a23a0532d4b81d0bf57' },
+      headers: { 'X-Auth-Token': ApiKey },
     };
 
     fetch(url, options)
