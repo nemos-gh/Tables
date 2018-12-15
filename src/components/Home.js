@@ -30,11 +30,12 @@ class Home extends React.Component {
         </pre>
         <p>Nice and easy <span role="img" aria-label="snow">😎</span></p>
         <h2 className="h-2">Data Access</h2>
-        <p>Copy the Api Key you received in the confirmation email after registering on the Football-Data.org and paste it as value for the variable ApiKey.</p>
-        <small>Path to ApiKey variable</small>
+        <p>After successful registration on the Football-Data.org, copy the Api Key you received in the confirmation email and paste it as value for the ApiKey constant.</p>
+        <small>Path to ApiKey constant</small>
         <pre>
           <code>./src/components/lib/api-key.js</code>
         </pre>
+        <p>That's all.</p>
       </div>
     )
   }
