@@ -8,6 +8,7 @@ body {
   min-height: 100%;
   padding: $headerHeight + $headerBottomMargin 0 $footerHeight + $footerTopMargin;
   font-family: $font-primary;
+  letter-spacing: .02em;
   background: $-c-body-bg;
 }
 

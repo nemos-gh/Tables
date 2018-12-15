@@ -15,7 +15,6 @@ h2 {
   line-height: px-to-rem(60);
   font-size: px-to-rem(60);
   font-weight: 700;
-  letter-spacing: .02rem;
   
   &::after {
     content: '';
@@ -34,7 +33,6 @@ h2 {
   margin: px-to-rem($baseFontSize * 3) 0 px-to-rem($baseFontSize);
   line-height: px-to-rem(40);
   font-size: px-to-rem(40);
-  letter-spacing: .01rem;
 
   &::after { display: none; }
 }
@@ -49,4 +47,5 @@ h2 {
 .small {
   margin-bottom: px-to-rem(8);
   color: $gray;
+  letter-spacing: .01em;
 }
