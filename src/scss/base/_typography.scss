@@ -1,26 +1,17 @@
-h1 {
-  margin-bottom: px-to-rem(20);
-  font-weight: 700;
-}
-
-h2 {
-  font-weight: 700;
-}
-
-
 .h-1 {
   position: relative;
-  margin: px-to-rem(18) 0 px-to-rem(39);
+  padding-bottom: 4px;
+  margin: px-to-rem(16) 0 px-to-rem(36);
   font-family: $font-primary;
   line-height: px-to-rem(60);
   font-size: px-to-rem(60);
-  font-weight: 700;
+  font-weight: 500;
   
   &::after {
     content: '';
     display: block;
     position: absolute;
-    bottom: -9px;
+    bottom: -5px;
     left: 0;
     width: 80px;
     height: 2px;
