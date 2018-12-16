@@ -13,19 +13,17 @@ class League extends React.Component {
   }
 
   componentDidMount() {
-    Api(this.getLeagueCode()).then(data => {
-
-      this.setState({data})
-    });
+    Api(this.getFetchUrl())
+      .then(data => this.setState({data}));
   }
 
   componentDidUpdate(prevProps) {
     if (this.props.match.params.country !== prevProps.match.params.country) {
-      Api(this.getLeagueCode())
+      Api(this.getFetchUrl())
         .then(data => this.setState({data}));
     }
   }
-  
+
   render() {
 
     if (!this.state.data) {
@@ -42,11 +40,12 @@ class League extends React.Component {
     )
   }
 
-  getLeagueCode() {
+  getFetchUrl() {
     const country = this.props.match.params.country;
-    const code = Countries.find(obj => obj.shortName === country).leagueCode;
+    const league = Countries.find(obj => obj.shortName === country).leagueCode;
+    const url = `http://api.football-data.org/v2/competitions/${league}/standings/`;
 
-    return code;
+    return url;
   }
 }
 

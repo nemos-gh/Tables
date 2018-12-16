@@ -1,7 +1,6 @@
 import ApiKey from './api-key';
 
-const Api = (league) => {
-  const url = `http://api.football-data.org/v2/competitions/${league}/standings/`;
+const Api = (url) => {
   const options = {
     headers: { 'X-Auth-Token': ApiKey }
   };
