@@ -1,15 +1,35 @@
 .msg {
   margin: px-to-rem($baseFontSize * 2) 0;
   padding: px-to-rem(20) px-to-rem(25);
+  color: rgba($black, .5);
   font-size: px-to-rem(15);
-  background: rgba(0,0,0,.05);
+  font-weight: 500;
+  letter-spacing: .01em;
+  background: rgba(0,0,0,.1);
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,.1);
   border-radius: 6px;
+
+  &.success {
+    color: darken($-c-success, 38);
+    background: $-c-success;
+  }
+
+  &.info {
+    color: darken($-c-info, 38);
+    background: $-c-info;
+  }
 
   &.warning {
     color: darken($-c-warning, 38);
-    font-weight: 500;
-    letter-spacing: .01em;
     background: $-c-warning;
-    border: 1px solid darken($-c-warning, 23);
+  }
+
+  &.error {
+    color: darken($-c-error, 38);
+    background: $-c-error;
+  }
+
+  p {
+    margin: 0;
   }
 }
