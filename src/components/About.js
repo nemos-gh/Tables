@@ -14,7 +14,7 @@ const About = () => {
       </ul>
       <p>Hope you will find Tables App useful in any way... Enjoy!</p>
       <Message 
-        text={"This App doesn't support Inetnet Explorer and it never will. There, I said it."}
+        text={"This App doesn't support Inetnet Explorer and never will. There, I said it."}
         type={"warning"} />
     </div>
   )
