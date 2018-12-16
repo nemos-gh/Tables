@@ -6,10 +6,14 @@ html {
 body {
   position: relative;
   min-height: 100%;
-  padding: $headerHeight + $headerBottomMargin 0 $footerHeight + $footerTopMargin;
+  padding: $headerHeight + $headerBottomMargin 0 $footerHeight + $footerTopMargin / 3;
   font-family: $font-primary;
   letter-spacing: .02em;
   background: $-c-body-bg;
+
+  @include media-breakpoint-up(md) {
+    padding: $headerHeight + $headerBottomMargin 0 $footerHeight + $footerTopMargin;
+  }
 }
 
 a {

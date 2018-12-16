@@ -1,9 +1,13 @@
 .side-menu {
   display: flex;
   align-items: flex-start;
-  padding-top: 130px;
+  padding-top: 20px;
   width: 100%;
   height: 100%;
+
+  @include media-breakpoint-up(md) {
+    padding-top: 130px;
+  }
   
   ul {
     position: sticky;
