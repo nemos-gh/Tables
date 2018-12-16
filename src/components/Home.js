@@ -3,7 +3,7 @@ import React from 'react';
 const Home = () => {
   
   return (
-    <div>
+    <React.Fragment>
       <h1 className="h-1">Tables App</h1>
       <p>The project is a result of playing with the React Framework and love for football. For an easy start of coding, <a href="https://github.com/facebook/create-react-app" target="_blank" rel="noopener noreferrer">Create React App</a> is used to setup dev environment.</p>
       <p>Football data are obtained by pretty cool and comprehensive Football-Data Api. In order to gain data access register on Football-Data.org and <a href="https://www.football-data.org/client/register" target="_blank" rel="noopener noreferrer">get your free Api Key</a> in the confirmation email.</p>
@@ -35,7 +35,7 @@ const Home = () => {
         <code>./src/components/lib/api-key.js</code>
       </pre>
       <p>That's all.</p>
-    </div>
+    </React.Fragment>
   )
 }
 

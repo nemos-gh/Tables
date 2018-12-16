@@ -27,9 +27,7 @@ class League extends React.Component {
   render() {
 
     if (!this.state.data) {
-      return (
-        <div className="loading">Data Loading...</div>
-      )
+      return <div className="loading">Data Loading...</div>
     }
 
     return (
