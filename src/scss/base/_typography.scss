@@ -1,11 +1,11 @@
 .h-1 {
   position: relative;
   padding-bottom: 4px;
-  margin: px-to-rem(16) 0 px-to-rem(36);
+  margin: px-to-rem(20) 0 px-to-rem(40);
   font-family: $font-primary;
   line-height: px-to-rem(60);
   font-size: px-to-rem(60);
-  font-weight: 500;
+  font-weight: 700;
   
   &::after {
     content: '';
