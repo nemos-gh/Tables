@@ -10,8 +10,15 @@ class Table extends React.Component {
     };
   }
 
+  componentDidUpdate(prevProps) {
+    if(this.props.standings !== prevProps.standings) {
+      this.setState({
+        table: this.props.standings[0].table
+      })
+    }
+  }
+
   render() {
-    const table = this.state.table;
     const d = new Date(this.props.lastUpdate);
     const th = ['Pos', 'Team', 'Pld', 'W', 'D', 'L', 'GF', 'GA', 'GD', 'Pts'];
     const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
@@ -24,7 +31,7 @@ class Table extends React.Component {
             {th.map(el => <li key={el}>{el}</li> )}
           </ul>
         </li>
-        {table.map(el => 
+        {this.state.table.map(el => 
           <li key={el.team.id} className="table-row">
             <ul>
               <li key="0" className="pos">{el.position}</li>
