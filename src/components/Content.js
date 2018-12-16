@@ -5,28 +5,26 @@ import League from './League';
 import About from './About';
 import SideMenu from './SideMenu';
 
-class Content extends React.Component {
+const Content = () => {
 
-  render() {
-    return (
-      <main>
-        <div className="container">
-          <div className="row">
-            <div className="col-12 col-md-3 col-lg-2">
-              <SideMenu />
-            </div>
-            <div className="col-12 col-md-9 col-lg-8 offset-lg-1">
-              <Switch>
-                <Route exact path="/" component={Home}/>
-                <Route path="/table/:league" component={League}/>
-                <Route path="/about" component={About}/>
-              </Switch>
-            </div>
+  return (
+    <main>
+      <div className="container">
+        <div className="row">
+          <div className="col-12 col-md-3 col-lg-2">
+            <SideMenu />
+          </div>
+          <div className="col-12 col-md-9 col-lg-8 offset-lg-1">
+            <Switch>
+              <Route exact path="/" component={Home}/>
+              <Route path="/table/:league" component={League}/>
+              <Route path="/about" component={About}/>
+            </Switch>
           </div>
         </div>
-      </main>
-    )
-  }
+      </div>
+    </main>
+  )
 }
 
 export default Content;

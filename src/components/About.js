@@ -1,4 +1,5 @@
 import React from 'react';
+import Message from './Message';
 
 const About = () => {
   return (
@@ -12,7 +13,9 @@ const About = () => {
         <li>Bootstrap 4</li>
       </ul>
       <p>Hope you will find Tables App useful in any way... Enjoy!</p>
-      <p className="msg warning">This App doesn't support Inetnet Explorer and it never will. There, I said it.</p>
+      <Message 
+        text={"This App doesn't support Inetnet Explorer and it never will. There, I said it."}
+        type={"warning"} />
     </div>
   )
 }
