@@ -8,7 +8,8 @@ const About = () => {
       <p>This small React app is a good place to see practical use of the create-react-app and can be a good starting point for creating larger apps. Find out about the directory structure and a fine way to organize your files. Versatile React ES6 techniques has been used together with:</p>
       <ul>
         <li>ES6</li>
-        <li>JS fetch API</li>
+        <li>React Router</li>
+        <li>Fetch API</li>
         <li>Scss</li>
         <li>Bootstrap 4</li>
       </ul>

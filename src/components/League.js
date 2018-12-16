@@ -33,7 +33,7 @@ class League extends React.Component {
     return (
       <Table
         league={this.state.data.competition.name}
-        table={this.state.data.standings[0].table}
+        standings={this.state.data.standings}
         lastUpdate={this.state.data.competition.lastUpdated} />
     )
   }
