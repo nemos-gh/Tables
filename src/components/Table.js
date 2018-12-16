@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Table = (props) => {
   const table = props.table;
@@ -41,3 +42,9 @@ const Table = (props) => {
 }
 
 export default Table;
+
+Table.propTypes = {
+  league: PropTypes.string.isRequired,
+  table: PropTypes.array.isRequired,
+  lastUpdate: PropTypes.string.isRequired
+}
