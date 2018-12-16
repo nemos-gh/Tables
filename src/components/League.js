@@ -1,16 +1,52 @@
 import React from 'react';
 import Api from './lib/api';
+import Countries from './lib/countries';
+import Table from './Table';
 
 class League extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      data: null
+    }
+  }
+
+  componentDidMount() {
+    Api(this.getLeagueCode()).then(data => {
+
+      this.setState({data})
+    });
+  }
+
+  componentDidUpdate(prevProps) {
+    if (this.props.match.params.country !== prevProps.match.params.country) {
+      Api(this.getLeagueCode())
+        .then(data => this.setState({data}));
+    }
+  }
   
   render() {
-    const country = this.props.match.params.league;
+
+    if (!this.state.data) {
+      return (
+        <div className="loading">Data Loading...</div>
+      )
+    }
 
     return (
-      <div>
-        <Api countryCode={country} />
-      </div>
+      <Table
+        league={this.state.data.competition.name}
+        table={this.state.data.standings[0].table}
+        lastUpdate={this.state.data.competition.lastUpdated} />
     )
+  }
+
+  getLeagueCode() {
+    const country = this.props.match.params.country;
+    const code = Countries.find(obj => obj.shortName === country).leagueCode;
+
+    return code;
   }
 }
 

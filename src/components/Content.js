@@ -17,7 +17,7 @@ const Content = () => {
           <div className="col-12 col-md-9 col-lg-8 offset-lg-1">
             <Switch>
               <Route exact path="/" component={Home}/>
-              <Route path="/table/:league" component={League}/>
+              <Route path="/table/:country" component={League}/>
               <Route path="/about" component={About}/>
             </Switch>
           </div>
