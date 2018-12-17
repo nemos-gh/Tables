@@ -2,6 +2,7 @@ import React from 'react';
 import Message from './Message';
 
 const About = () => {
+  
   return (
     <React.Fragment>
       <h1 className="h-1">About</h1>
