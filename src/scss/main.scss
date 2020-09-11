@@ -1,21 +1,20 @@
 @import '../../node_modules/bootstrap/scss/bootstrap.scss';
 
-@import 
+@import
   './abstracts/variables',
   './abstracts/mixins';
 
-@import 
+@import
   './base/general',
   './base/typography';
 
-@import 
-  './components/buttons',
+@import
   './components/side-menu',
   './components/loading',
   './components/massages',
   './components/table';
 
-@import 
+@import
   './layout/header',
   './layout/footer',
   './layout/navigation';
