@@ -12,7 +12,7 @@ const Header = () => {
 
             <nav className="top-nav">
               <Link to="/" className="logo">
-                <img src={`${imagesPath}/Soccer_ball.svg`} alt=""/>
+                <img src={`${imagesPath}/soccer-ball.svg`} alt=""/>
                 <h1>Tables</h1>
               </Link>
 
