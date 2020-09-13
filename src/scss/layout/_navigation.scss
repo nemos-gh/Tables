@@ -10,20 +10,10 @@
     display: inline-flex;
     align-items: center;
 
-    &::after {
-      content: '';
-      position: absolute;
-      right: 0;
-      bottom: 2px;
-      width: 88px;
-      height: 2px;
-      background: $-c-code;
-    }
-
     img {
       margin-right: 4px;
-      width: 38px;
-      height: 38px;;
+      width: 35px;
+      height: 35px;
     }
 
     h1 {
