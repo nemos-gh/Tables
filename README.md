@@ -2,7 +2,7 @@
 
 **React App:** latest `Football Tables` in major football leagues of England, France, Germany, Italy and Spain. <br>
 
-[Check the Demo](http://aboutn.com/gh/tables)
+[Check the Demo](http://codenorth.dev/gh/tables)
 
 ___
 
